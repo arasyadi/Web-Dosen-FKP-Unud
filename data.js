@@ -4,38 +4,38 @@ const dataDosen = [
         "nama": "Andy Rasyadi, S.Pi., M.Si.",
         "jabatan": "Dosen Asisten Ahli",
         "nuptk": "87654321",
-        "bidang_keahlian": "Dinamika Populasi Ikan, Avertebrata, Daya Dukung Perairan",
+        "bidang_keahlian": "Dinamika Populasi Ikan dan Avertebrata Air",
         "pendidikan": {
-            "s1": "Budidaya Perairan - Universitas Muhammadiyah Makassar",
+            "s1": "Budidaya Perairan - Univ. Muhammadiyah Makassar",
             "s2": "Pengelolaan Sumberdaya Perairan - IPB University",
             "s3": "-"
         },
         "email": "andy.rasyadi@unud.ac.id",
-        "program_studi": "Manajemen Sumberdaya Perairan",
+        "program_studi": "S1 Manajemen Sumberdaya Perairan",
         "foto": "https://fkp.unud.ac.id/protected/storage/file_summernote/5af7b98129e56dfc29f912f0abde6d8e.jpg",
         "links": [
-            {"nama": "Publikasi", "url": "#", "icon": "fa-file-alt"},
-            {"nama": "ResearchGate", "url": "#", "icon": "fa-flask"},
-            {"nama": "Google Scholar", "url": "#", "icon": "fa-graduation-cap"}
+            {"nama": "Scopus", "url": "#", "icon": "fa-file-alt"},
+            {"nama": "SINTA", "url": "https://sinta.kemdiktisaintek.go.id/authors/profile/6968791", "icon": "fa-flask"},
+            {"nama": "Google Scholar", "url": "https://scholar.google.com/citations?user=adxkaecAAAAJ&hl=en", "icon": "fa-graduation-cap"}
         ]
     },
     {
-        "nama": "Prof. Dr. Ir. Bambang Ocean, M.Sc.",
-        "jabatan": "Guru Besar",
+        "nama": "Dr. Pande Gde Sasmita Julyantoro, S.Si., M.Si.",
+        "jabatan": "Lektor Kepala",
         "nuptk": "12345678",
-        "bidang_keahlian": "Dinamika Populasi Ikan",
+        "bidang_keahlian": "Akuakultur & Mikrobiologi Akuatik",
         "pendidikan": {
-            "s1": "Perikanan - IPB University",
-            "s2": "Fisheries Science - University of Washington",
-            "s3": "Ilmu Perikanan - IPB University"
+            "s1": "Institut Teknologi Bandung",
+            "s2": "Institut Teknologi Bandung",
+            "s3": "Ghent University"
         },
-        "email": "bambang.ocean@unud.ac.id",
-        "program_studi": "Manajemen Sumberdaya Perairan",
-        "foto": "https://placehold.co/120x180/0a4a6f/white?text=Prof.+Bambang",
+        "email": "pande.sasmita@unud.ac.id",
+        "program_studi": "S1 Akuakultur",
+        "foto": "https://fkp.unud.ac.id/protected/storage/file_summernote/16adb31b6ebda70cf1344a04c484648b.jpg",
         "links": [
-            {"nama": "Jurnal", "url": "#", "icon": "fa-book"},
-            {"nama": "LinkedIn", "url": "#", "icon": "fa-brands fa-linkedin"},
-            {"nama": "Sinta", "url": "#", "icon": "fa-star"}
+            {"nama": "Scopus", "url": "#", "icon": "fa-file-alt"},
+            {"nama": "SINTA", "url": "https://sinta.kemdiktisaintek.go.id/authors/profile/5975626", "icon": "fa-flask"},
+            {"nama": "Google Scholar", "url": "https://scholar.google.com/citations?user=iqkFmegAAAAJ&hl=en&oi=ao", "icon": "fa-graduation-cap"}
         ]
     },
     {
