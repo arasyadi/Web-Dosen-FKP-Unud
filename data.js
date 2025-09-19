@@ -49,7 +49,7 @@ const dataDosen = [
         "pendidikan": {
             "s1": "Akuakultur - Sekolah Tinggi Perikanan Jakarta",
             "s2": "Budidaya Perairan - Universitas Brawijaya",
-            "s3": "Ilmu Lingkungan - Uiversitas Udayana"
+            "s3": "Ilmu Lingkungan - Universitas Udayana"
         },
         "email": "ayuputu@unud.ac.id",
         "program_studi": "S1 Akuakultur",
@@ -61,23 +61,23 @@ const dataDosen = [
         ]
     },
     {
-        "nama": "Dr. Fishery Aqua, S.Pi., M.Si.",
-        "profileUrl": "https://fkp.unud.ac.id/profile/fishery-aqua",
-        "jabatan": "Dosen Tetap",
+        "nama": "Made Narayana Adibhusana, S.Kel., M.Eng.",
+        "profileUrl": "https://www.unud.ac.id/in/dosen199410242025061008.html",
+        "jabatan": "Asisten Ahli",
         "nuptk": "34567890",
-        "bidang_keahlian": "Budidaya Perairan",
+        "bidang_keahlian": "Teknik Pantai",
         "pendidikan": {
-            "s1": "Akuakultur - IPB University",
-            "s2": "Aquaculture - Asian Institute of Technology",
-            "s3": "Ilmu Perikanan - Universitas Brawijaya"
+            "s1": "Ilmu Kelautan - Universitas Udayana",
+            "s2": "Coastal Engineering - Pukyong National University",
+            "s3": "-"
         },
-        "email": "fishery.aqua@unud.ac.id",
-        "program_studi": "Budidaya Perairan",
-        "foto": "https://placehold.co/120x180/1b6f8c/white?text=Dr.+Fishery",
+        "email": "narayana@unud.ac.id",
+        "program_studi": "S1 Ilmu Kelautan",
+        "foto": "https://fkp.unud.ac.id/protected/storage/file_summernote/c82e277f0812d0be1bb041be356b799b.jpg",
         "links": [
-            {"nama": "ResearchGate", "url": "#", "icon": "fa-brands fa-researchgate"},
-            {"nama": "Scopus", "url": "#", "icon": "fa-search"},
-            {"nama": "Google Scholar", "url": "#", "icon": "fa-graduation-cap"}
+            {"nama": "Scopus", "url": "#", "icon": "fa-file-alt"},
+            {"nama": "SINTA", "url": "https://sinta.kemdiktisaintek.go.id/authors/profile/6172361", "icon": "fa-flask"},
+            {"nama": "Google Scholar", "url": "https://scholar.google.com/citations?user=zXOE2PYAAAAJ&hl=en&oi=ao"}
         ]
     }
 ];
