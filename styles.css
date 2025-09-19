@@ -146,6 +146,35 @@ body {
     font-weight: 500;
 }
 
+/* Clickable Name Link Styles */
+.dosen-name-link {
+    color: var(--primary);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    position: relative;
+}
+
+.dosen-name-link:hover {
+    color: var(--accent);
+    transform: translateX(3px);
+}
+
+.dosen-name-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background: var(--accent);
+    transition: width 0.3s ease;
+}
+
+.dosen-name-link:hover::after {
+    width: 100%;
+}
+
 .photo-container {
     flex-shrink: 0;
 }
