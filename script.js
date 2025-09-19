@@ -14,7 +14,11 @@ function createDosenCard(dosen) {
                         <img src="${dosen.foto}" alt="Foto ${dosen.nama}" class="dosen-photo">
                     </div>
                     <div class="intro-text">
-                        <h2>${dosen.nama}</h2>
+                        <h2>
+                            <a href="${dosen.profileUrl}" class="dosen-name-link" target="_blank" rel="noopener noreferrer">
+                                ${dosen.nama}
+                            </a>
+                        </h2>
                         <p class="jabatan-text">${dosen.jabatan} - ${dosen.program_studi}</p>
                     </div>
                 </div>
