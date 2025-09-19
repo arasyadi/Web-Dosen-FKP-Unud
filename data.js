@@ -79,6 +79,26 @@ const dataDosen = [
             {"nama": "SINTA", "url": "https://sinta.kemdiktisaintek.go.id/authors/profile/6172361", "icon": "fa-flask"},
             {"nama": "Google Scholar", "url": "https://scholar.google.com/citations?user=zXOE2PYAAAAJ&hl=en&oi=ao"}
         ]
+    },
+    {
+        "nama": "Endang Wulandari Suryaningtyas, S.Pi., M.P.",
+        "profileUrl": "https://www.unud.ac.id/in/dosen197405292012122001.html",
+        "jabatan": "Asisten Ahli",
+        "nuptk": "197405292012122001",
+        "bidang_keahlian": "Parasit & Penyakit Ikan",
+        "pendidikan": {
+            "s1": "Sosial Ekonomi Perikanan - Universitas Brawijaya",
+            "s2": "Budidaya Perairan - Universitas Brawijaya",
+            "s3": "-"
+        },
+        "email": "endangwulandari@unud.ac.id",
+        "program_studi": "S1 Akuakultur",
+        "foto": "https://fkp.unud.ac.id/protected/storage/file_summernote/8b24863354605858108658f86401fca2.jpg",
+        "links": [
+            {"nama": "Scopus", "url": "#", "icon": "fa-file-alt"},
+            {"nama": "SINTA", "url": "https://sinta.kemdiktisaintek.go.id/authors/profile/5986102", "icon": "fa-flask"},
+            {"nama": "Google Scholar", "url": "https://scholar.google.com/citations?user=9f6H4GQAAAAJ&hl=en&oi=ao"}
+        ]
     }
 ];
 
