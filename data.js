@@ -2,7 +2,8 @@
 const dataDosen = [
     {
         "nama": "Andy Rasyadi, S.Pi., M.Si.",
-        "jabatan": "Dosen Asisten Ahli",
+        "profileUrl": "https://www.unud.ac.id/in/dosen199809262025061005.html", // Custom URL untuk profil dosen
+        "jabatan": "Asisten Ahli",
         "nuptk": "87654321",
         "bidang_keahlian": "Dinamika Populasi Ikan dan Avertebrata Air",
         "pendidikan": {
@@ -21,6 +22,7 @@ const dataDosen = [
     },
     {
         "nama": "Dr. Pande Gde Sasmita Julyantoro, S.Si., M.Si.",
+        "profileUrl": "https://fkp.unud.ac.id/profile/pande-sasmita-julyantoro",
         "jabatan": "Lektor Kepala",
         "nuptk": "12345678",
         "bidang_keahlian": "Akuakultur & Mikrobiologi Akuatik",
@@ -40,6 +42,7 @@ const dataDosen = [
     },
     {
         "nama": "Dr. Coral Reef, S.Kel., M.Si.",
+        "profileUrl": "https://fkp.unud.ac.id/profile/coral-reef",
         "jabatan": "Dosen Tetap",
         "nuptk": "23456789",
         "bidang_keahlian": "Ekologi Terumbu Karang",
@@ -59,6 +62,7 @@ const dataDosen = [
     },
     {
         "nama": "Dr. Fishery Aqua, S.Pi., M.Si.",
+        "profileUrl": "https://fkp.unud.ac.id/profile/fishery-aqua",
         "jabatan": "Dosen Tetap",
         "nuptk": "34567890",
         "bidang_keahlian": "Budidaya Perairan",
@@ -85,6 +89,7 @@ for (let i = 4; i < 30; i++) {
     
     dataDosen.push({
         "nama": `Dr. Dosen Contoh ${i+1}, S.Pi., M.Si.`,
+        "profileUrl": `https://fkp.unud.ac.id/profile/dosen-contoh-${i+1}`, // Auto-generated URL
         "jabatan": "Dosen Tetap",
         "nuptk": `${10000000 + i}`,
         "bidang_keahlian": `${expertise[i % expertise.length]}`,
