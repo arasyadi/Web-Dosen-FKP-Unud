@@ -4,7 +4,7 @@ const dataDosen = [
         "nama": "Andy Rasyadi, S.Pi., M.Si.",
         "profileUrl": "https://www.unud.ac.id/in/dosen199809262025061005.html", // Custom URL untuk profil dosen
         "jabatan": "Asisten Ahli",
-        "nuptk": "87654321",
+        "nuptk": "2258776677130133",
         "bidang_keahlian": "Dinamika Populasi Ikan dan Avertebrata Air",
         "pendidikan": {
             "s1": "Budidaya Perairan - Univ. Muhammadiyah Makassar",
@@ -22,9 +22,9 @@ const dataDosen = [
     },
     {
         "nama": "Dr. Pande Gde Sasmita Julyantoro, S.Si., M.Si.",
-        "profileUrl": "https://fkp.unud.ac.id/profile/pande-sasmita-julyantoro",
+        "profileUrl": "https://www.unud.ac.id/in/dosen198007262008121005.html",
         "jabatan": "Lektor Kepala",
-        "nuptk": "12345678",
+        "nuptk": "8058758659110013",
         "bidang_keahlian": "Akuakultur & Mikrobiologi Akuatik",
         "pendidikan": {
             "s1": "Institut Teknologi Bandung",
@@ -41,23 +41,23 @@ const dataDosen = [
         ]
     },
     {
-        "nama": "Dr. Coral Reef, S.Kel., M.Si.",
-        "profileUrl": "https://fkp.unud.ac.id/profile/coral-reef",
-        "jabatan": "Dosen Tetap",
-        "nuptk": "23456789",
-        "bidang_keahlian": "Ekologi Terumbu Karang",
+        "nama": "Dr. Ayu Putu Wiweka Krisna Dewi, S.St.Pi., M.P.",
+        "profileUrl": "https://www.unud.ac.id/in/dosen199006202025062002.html",
+        "jabatan": "Asisten Ahli",
+        "nuptk": "2952768669230372",
+        "bidang_keahlian": "Akuakultur & Tumbuhan Air",
         "pendidikan": {
-            "s1": "Ilmu Kelautan - Universitas Hasanuddin",
-            "s2": "Marine Science - James Cook University",
-            "s3": "Marine Biology - University of Queensland"
+            "s1": "Akuakultur - Sekolah Tinggi Perikanan Jakarta",
+            "s2": "Budidaya Perairan - Universitas Brawijaya",
+            "s3": "Ilmu Lingkungan - Uiversitas Udayana"
         },
-        "email": "coral.reef@unud.ac.id",
-        "program_studi": "Ilmu Kelautan",
-        "foto": "https://placehold.co/120x180/34b4b4/white?text=Dr.+Coral",
+        "email": "ayuputu@unud.ac.id",
+        "program_studi": "S1 Akuakultur",
+        "foto": "https://fkp.unud.ac.id/protected/storage/file_summernote/48d11f438a1b17acf7faefd2b389eea1.jpg",
         "links": [
-            {"nama": "Publikasi", "url": "#", "icon": "fa-file-alt"},
-            {"nama": "Website", "url": "#", "icon": "fa-globe"},
-            {"nama": "ORCID", "url": "#", "icon": "fa-brands fa-orcid"}
+            {"nama": "Scopus", "url": "#", "icon": "fa-file-alt"},
+            {"nama": "SINTA", "url": "https://sinta.kemdiktisaintek.go.id/authors/profile/6172361", "icon": "fa-flask"},
+            {"nama": "Google Scholar", "url": "https://scholar.google.com/citations?user=ZLIkPREAAAAJ&hl=en&oi=ao", "icon": "fa-graduation-cap"}
         ]
     },
     {
