@@ -77,7 +77,7 @@ const dataDosen = [
         "links": [
             {"nama": "Scopus", "url": "#", "icon": "fa-file-alt"},
             {"nama": "SINTA", "url": "https://sinta.kemdiktisaintek.go.id/authors/profile/6172361", "icon": "fa-flask"},
-            {"nama": "Google Scholar", "url": "https://scholar.google.com/citations?user=zXOE2PYAAAAJ&hl=en&oi=ao"}
+            {"nama": "Google Scholar", "url": "https://scholar.google.com/citations?user=zXOE2PYAAAAJ&hl=en&oi=ao", "icon": "fa-graduation-cap"}
         ]
     },
     {
@@ -97,7 +97,7 @@ const dataDosen = [
         "links": [
             {"nama": "Scopus", "url": "#", "icon": "fa-file-alt"},
             {"nama": "SINTA", "url": "https://sinta.kemdiktisaintek.go.id/authors/profile/5986102", "icon": "fa-flask"},
-            {"nama": "Google Scholar", "url": "https://scholar.google.com/citations?user=9f6H4GQAAAAJ&hl=en&oi=ao"}
+            {"nama": "Google Scholar", "url": "https://scholar.google.com/citations?user=9f6H4GQAAAAJ&hl=en&oi=ao", "icon": "fa-graduation-cap"}
         ]
     }
 ];
