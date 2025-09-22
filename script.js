@@ -115,6 +115,8 @@ function getRecommendations() {
     // Define keywords for each lecturer based on their expertise
     const expertiseKeywords = {
         "Dinamika Populasi Ikan dan Avertebrata Air": ["populasi", "ikan", "avertebrata", "dinamika", "stok", "kelimpahan"],
+        // [FIX] Menambahkan kata kunci untuk "Dinamika Populasi Ikan"
+        "Dinamika Populasi Ikan": ["populasi", "ikan", "stok", "kelimpahan", "pemodelan"],
         "Akuakultur & Mikrobiologi Akuatik": ["akuakultur", "mikrobiologi", "budidaya", "pertumbuhan", "pakan", "kualitas air"],
         "Akuakultur & Tumbuhan Air": ["akuakultur", "tumbuhan air", "fitoremediasi", "algae", "rumput laut"],
         "Teknik Pantai": ["pantai", "teknik", "erosi", "sedimen", "gelombang", "arus"],
@@ -210,33 +212,18 @@ function displayRecommendations(recommendations) {
 }
 
 function highlightRecommendedDosen() {
-    // Remove previous highlights
     document.querySelectorAll('.dosen-card').forEach(card => {
         card.classList.remove('recommended');
-    });
-    
-    // Add highlight to recommended lecturers
-    recommendedDosen.forEach(nip => {
-        const cards = document.querySelectorAll('.dosen-card');
-        cards.forEach(card => {
-            const cardNip = card.querySelector('.info-value').textContent.trim();
-            if (cardNip === nip) {
-                card.classList.add('recommended');
-            }
-        });
+        // [FIX] Menggunakan dataset.nip untuk memeriksa NIP, lebih andal.
+        if (recommendedDosen.includes(card.dataset.nip)) {
+            card.classList.add('recommended');
+        }
     });
 }
 
 function scrollToDosenCard(nip) {
-    const cards = document.querySelectorAll('.dosen-card');
-    let targetCard = null;
-    
-    cards.forEach(card => {
-        const cardNip = card.querySelector('.info-value').textContent.trim();
-        if (cardNip === nip) {
-            targetCard = card;
-        }
-    });
+    // [FIX] Menggunakan querySelector dengan atribut data-nip untuk menemukan kartu yang tepat.
+    const targetCard = document.querySelector(`.dosen-card[data-nip="${nip}"]`);
     
     if (targetCard) {
         // Add temporary highlight
@@ -254,8 +241,10 @@ function scrollToDosenCard(nip) {
 
 // Card template function
 function createDosenCard(dosen) {
+    // [FIX 1] Menambahkan atribut data-nip="${dosen.nip}" untuk seleksi yang andal.
+    // [FIX 2] Mengganti data-i18n="NIP" menjadi "nip" agar sesuai dengan objek terjemahan.
     return `
-        <div class="dosen-card ${recommendedDosen.includes(dosen.nip) ? 'recommended' : ''}">
+        <div class="dosen-card ${recommendedDosen.includes(dosen.nip) ? 'recommended' : ''}" data-nip="${dosen.nip}">
             <div class="card-body">
                 <div class="card-intro">
                     <div class="photo-container">
@@ -273,7 +262,7 @@ function createDosenCard(dosen) {
 
                 <div class="profile-details">
                     <div class="info-item">
-                        <span class="info-label" data-i18n="NIP">NIP:</span>
+                        <span class="info-label" data-i18n="nip">NIP:</span>
                         <span class="info-value">${dosen.nip}</span>
                     </div>
                     <div class="info-item">
@@ -309,6 +298,7 @@ function createDosenCard(dosen) {
     `;
 }
 
+
 // Pagination functions
 function showDosenPage(page) {
     const container = document.getElementById('dosen-container');
@@ -329,6 +319,8 @@ function createPaginationButtons() {
     const paginationContainer = document.getElementById('pagination');
     paginationContainer.innerHTML = '';
     
+    if (totalPages <= 1) return; // Don't show pagination if only one page
+
     // Previous button
     const prevButton = document.createElement('button');
     prevButton.className = 'page-btn';
@@ -371,14 +363,14 @@ function updatePaginationButtons(activePage) {
     const buttons = document.querySelectorAll('.page-btn');
     buttons.forEach(button => {
         button.classList.remove('active');
-        if (button.textContent == activePage) {
+        if (parseInt(button.textContent) === activePage) {
             button.classList.add('active');
         }
     });
 }
 
 // Language functions
-function applyLanguage(lang) {
+function setLanguage(lang) {
     currentLang = lang;
     const translation = translations[lang];
     
@@ -388,10 +380,13 @@ function applyLanguage(lang) {
             element.textContent = translation[key];
         }
     });
+
+    // Update dynamic text
+    updateFilterCount(); // Ensure filter count text is also translated if needed
 }
 
 function applyCurrentLanguage() {
-    applyLanguage(currentLang);
+    setLanguage(currentLang);
 }
 
 function setupLanguageToggle() {
@@ -401,13 +396,13 @@ function setupLanguageToggle() {
     idLangBtn.addEventListener('click', () => {
         idLangBtn.classList.add('active');
         enLangBtn.classList.remove('active');
-        applyLanguage('id');
+        setLanguage('id');
     });
     
     enLangBtn.addEventListener('click', () => {
         enLangBtn.classList.add('active');
         idLangBtn.classList.remove('active');
-        applyLanguage('en');
+        setLanguage('en');
     });
 }
 
@@ -421,4 +416,3 @@ document.addEventListener('DOMContentLoaded', function() {
     setupLanguageToggle();
     updateFilterCount();
 });
-[file content end]
