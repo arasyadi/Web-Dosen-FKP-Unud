@@ -141,7 +141,7 @@ const translations = {
         'email': 'E-mail:', 
         'studyProgram': 'Program Studi:', 
         'photoNote': '*Foto dapat diganti', 
-        'footer': '© 2023 Fakultas Kelautan dan Perikanan. Hak Cipta Dilindungi.' 
+        'footer': '© 2025 Andy Raasyadi. Hak Cipta Dilindungi.' 
     },
     'en': { 
         'title': 'Faculty of Marine and Fisheries', 
@@ -153,6 +153,6 @@ const translations = {
         'email': 'Email:', 
         'studyProgram': 'Study Program:', 
         'photoNote': '*Photo can be replaced', 
-        'footer': '© 2023 Faculty of Marine and Fisheries. All rights reserved.' 
+        'footer': '© 2025 Andy Rasyadi. All rights reserved.' 
     }
 };
