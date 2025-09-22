@@ -417,7 +417,7 @@ body {
 }
 
 .education-item::before {
-    content: "ðŸŽ“";
+    content: "🎓";
     position: absolute;
     left: 0;
     top: 2px;
