@@ -4,7 +4,7 @@ const dataDosen = [
         "nama": "Andy Rasyadi, S.Pi., M.Si.",
         "profileUrl": "https://www.unud.ac.id/in/dosen199809262025061005.html", // Custom URL untuk profil dosen
         "jabatan": "Asisten Ahli",
-        "nuptk": "2258776677130133",
+        "nip": "199809262025061005",
         "bidang_keahlian": "Dinamika Populasi Ikan dan Avertebrata Air",
         "pendidikan": {
             "s1": "Budidaya Perairan - Univ. Muhammadiyah Makassar",
@@ -24,7 +24,7 @@ const dataDosen = [
         "nama": "Dr. Pande Gde Sasmita Julyantoro, S.Si., M.Si.",
         "profileUrl": "https://www.unud.ac.id/in/dosen198007262008121005.html",
         "jabatan": "Lektor Kepala",
-        "nuptk": "8058758659110013",
+        "nip": "198007262008121005",
         "bidang_keahlian": "Akuakultur & Mikrobiologi Akuatik",
         "pendidikan": {
             "s1": "Institut Teknologi Bandung",
@@ -44,7 +44,7 @@ const dataDosen = [
         "nama": "Dr. Ayu Putu Wiweka Krisna Dewi, S.St.Pi., M.P.",
         "profileUrl": "https://www.unud.ac.id/in/dosen199006202025062002.html",
         "jabatan": "Asisten Ahli",
-        "nuptk": "2952768669230372",
+        "nip": "199006202025062002",
         "bidang_keahlian": "Akuakultur & Tumbuhan Air",
         "pendidikan": {
             "s1": "Akuakultur - Sekolah Tinggi Perikanan Jakarta",
@@ -64,7 +64,7 @@ const dataDosen = [
         "nama": "Made Narayana Adibhusana, S.Kel., M.Eng.",
         "profileUrl": "https://www.unud.ac.id/in/dosen199410242025061008.html",
         "jabatan": "Asisten Ahli",
-        "nuptk": "34567890",
+        "nip": "199410242025061008",
         "bidang_keahlian": "Teknik Pantai",
         "pendidikan": {
             "s1": "Ilmu Kelautan - Universitas Udayana",
@@ -84,7 +84,7 @@ const dataDosen = [
         "nama": "Endang Wulandari Suryaningtyas, S.Pi., M.P.",
         "profileUrl": "https://www.unud.ac.id/in/dosen197405292012122001.html",
         "jabatan": "Asisten Ahli",
-        "nuptk": "197405292012122001",
+        "nip": "197405292012122001",
         "bidang_keahlian": "Parasit & Penyakit Ikan",
         "pendidikan": {
             "s1": "Sosial Ekonomi Perikanan - Universitas Brawijaya",
@@ -111,7 +111,7 @@ for (let i = 4; i < 30; i++) {
         "nama": `Dr. Dosen Contoh ${i+1}, S.Pi., M.Si.`,
         "profileUrl": `https://fkp.unud.ac.id/profile/dosen-contoh-${i+1}`, // Auto-generated URL
         "jabatan": "Dosen Tetap",
-        "nuptk": `${10000000 + i}`,
+        "nip": `${10000000 + i}`,
         "bidang_keahlian": `${expertise[i % expertise.length]}`,
         "pendidikan": { 
             "s1": "Ilmu Kelautan - Univ. Terkemuka", 
@@ -135,7 +135,7 @@ const translations = {
         'title': 'Fakultas Kelautan dan Perikanan', 
         'subtitle': 'Dosen Pengajar Berpengalaman dan Profesional', 
         'position': 'Jabatan:', 
-        'nuptk': 'NUPTK:', 
+        'nip': 'nip:', 
         'expertise': 'Bidang Keahlian:', 
         'education': 'Pendidikan:', 
         'email': 'E-mail:', 
@@ -147,7 +147,7 @@ const translations = {
         'title': 'Faculty of Marine and Fisheries', 
         'subtitle': 'Experienced and Professional Teaching Staff', 
         'position': 'Position:', 
-        'nuptk': 'NUPTK:', 
+        'nip': 'nip:', 
         'expertise': 'Field of Expertise:', 
         'education': 'Education:', 
         'email': 'Email:', 
