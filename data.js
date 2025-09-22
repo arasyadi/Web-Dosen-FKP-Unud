@@ -2,10 +2,10 @@
 const dataDosen = [
     {
         "nama": "Andy Rasyadi, S.Pi., M.Si.",
-        "profileUrl": "https://www.unud.ac.id/in/dosen199809262025061005.html", // Custom URL untuk profil dosen
+        "profileUrl": "https://www.unud.ac.id/in/dosen199809262025061005.html",
         "jabatan": "Asisten Ahli",
         "nip": "199809262025061005",
-        "bidang_keahlian": "Dinamika Populasi Ikan dan Avertebrata Air",
+        "bidang_keahlian": "Dinamika Populasi Ikan & Avertebrata Air",
         "pendidikan": {
             "s1": "Budidaya Perairan - Univ. Muhammadiyah Makassar",
             "s2": "Pengelolaan Sumberdaya Perairan - IPB University",
@@ -103,14 +103,13 @@ const dataDosen = [
 ];
 
 // Generate data untuk total 30 dosen
-// [FIX] Loop dimulai dari 5 untuk menghasilkan 25 data baru, sehingga totalnya menjadi 30.
 for (let i = 5; i < 30; i++) {
     const programs = ["Ilmu Kelautan", "Manajemen Sumberdaya Perairan", "Budidaya Perairan", "Teknologi Hasil Perikanan"];
     const expertise = ["Ekologi Laut", "Bioteknologi Kelautan", "Konservasi Perairan", "Dinamika Populasi Ikan", "Akustik Kelautan", "Oseanografi"];
     
     dataDosen.push({
         "nama": `Dr. Dosen Contoh ${i+1}, S.Pi., M.Si.`,
-        "profileUrl": `https://fkp.unud.ac.id/profile/dosen-contoh-${i+1}`, // Auto-generated URL
+        "profileUrl": `https://fkp.unud.ac.id/profile/dosen-contoh-${i+1}`,
         "jabatan": "Dosen Tetap",
         "nip": `${10000000 + i}`,
         "bidang_keahlian": `${expertise[i % expertise.length]}`,
