@@ -103,7 +103,8 @@ const dataDosen = [
 ];
 
 // Generate data untuk total 30 dosen
-for (let i = 4; i < 30; i++) {
+// [FIX] Loop dimulai dari 5 untuk menghasilkan 25 data baru, sehingga totalnya menjadi 30.
+for (let i = 5; i < 30; i++) {
     const programs = ["Ilmu Kelautan", "Manajemen Sumberdaya Perairan", "Budidaya Perairan", "Teknologi Hasil Perikanan"];
     const expertise = ["Ekologi Laut", "Bioteknologi Kelautan", "Konservasi Perairan", "Dinamika Populasi Ikan", "Akustik Kelautan", "Oseanografi"];
     
@@ -135,7 +136,7 @@ const translations = {
         'title': 'Fakultas Kelautan dan Perikanan', 
         'subtitle': 'Dosen Pengajar Berpengalaman dan Profesional', 
         'position': 'Jabatan:', 
-        'nip': 'nip:', 
+        'nip': 'NIP:', 
         'expertise': 'Bidang Keahlian:', 
         'education': 'Pendidikan:', 
         'email': 'E-mail:', 
@@ -147,7 +148,7 @@ const translations = {
         'title': 'Faculty of Marine and Fisheries', 
         'subtitle': 'Experienced and Professional Teaching Staff', 
         'position': 'Position:', 
-        'nip': 'nip:', 
+        'nip': 'NIP:', 
         'expertise': 'Field of Expertise:', 
         'education': 'Education:', 
         'email': 'Email:', 
