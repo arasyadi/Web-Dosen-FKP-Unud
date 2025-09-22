@@ -25,7 +25,7 @@ function createDosenCard(dosen) {
 
                 <div class="profile-details">
                     <div class="info-item">
-                        <span class="info-label" data-i18n="nip">NIP:</span>
+                        <span class="info-label" data-i18n="NIP">NIP:</span>
                         <span class="info-value">${dosen.nip}</span>
                     </div>
                     <div class="info-item">
