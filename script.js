@@ -1,3 +1,8 @@
+dataDosen.forEach(dosen => {
+    // Memisahkan berdasarkan ' & ' atau ' dan ' lalu membersihkan spasi
+    dosen.bidang_keahlian_list = dosen.bidang_keahlian.split(/ dan | & /).map(item => item.trim());
+});
+
 // Configuration
 const dosenPerPage = 14;
 let currentPage = 1;
@@ -13,11 +18,8 @@ function setupTabs() {
     
     tabBtns.forEach(btn => {
         btn.addEventListener('click', () => {
-            // Remove active class from all buttons and contents
             tabBtns.forEach(b => b.classList.remove('active'));
             tabContents.forEach(c => c.classList.remove('active'));
-            
-            // Add active class to clicked button and corresponding content
             btn.classList.add('active');
             const tabId = btn.getAttribute('data-tab');
             document.getElementById(tabId).classList.add('active');
@@ -28,11 +30,13 @@ function setupTabs() {
 // Filter system
 function generateFilterOptions() {
     const filterOptionsContainer = document.getElementById('filter-options');
-    
-    // Collect all unique expertise
     const expertiseSet = new Set();
+    
+    // [FIX 2] Mengambil data dari bidang_keahlian_list yang sudah dipisah
     dataDosen.forEach(dosen => {
-        expertiseSet.add(dosen.bidang_keahlian);
+        dosen.bidang_keahlian_list.forEach(keahlian => {
+            expertiseSet.add(keahlian);
+        });
     });
     
     const expertiseList = Array.from(expertiseSet).sort();
@@ -47,24 +51,22 @@ function generateFilterOptions() {
         filterOptionsContainer.appendChild(option);
     });
     
-    // Event listeners for filter buttons
     document.getElementById('apply-filter').addEventListener('click', applyFilters);
     document.getElementById('reset-filter').addEventListener('click', resetFilters);
 }
 
 function applyFilters() {
-    const selectedFilters = [];
-    document.querySelectorAll('.filter-option input:checked').forEach(checkbox => {
-        selectedFilters.push(checkbox.value);
-    });
+    const selectedFilters = Array.from(document.querySelectorAll('.filter-option input:checked')).map(cb => cb.value);
     
     if (selectedFilters.length === 0) {
         filteredDosen = [...dataDosen];
     } else {
-        filteredDosen = dataDosen.filter(dosen => selectedFilters.includes(dosen.bidang_keahlian));
+        // [FIX 2] Logika filter diubah untuk memeriksa setiap item di bidang_keahlian_list
+        filteredDosen = dataDosen.filter(dosen => 
+            dosen.bidang_keahlian_list.some(keahlian => selectedFilters.includes(keahlian))
+        );
     }
     
-    // Reset to first page and update display
     currentPage = 1;
     totalPages = Math.ceil(filteredDosen.length / dosenPerPage);
     showDosenPage(currentPage);
@@ -73,12 +75,7 @@ function applyFilters() {
 }
 
 function resetFilters() {
-    // Uncheck all checkboxes
-    document.querySelectorAll('.filter-option input').forEach(checkbox => {
-        checkbox.checked = false;
-    });
-    
-    // Reset filtered data
+    document.querySelectorAll('.filter-option input').forEach(checkbox => checkbox.checked = false);
     filteredDosen = [...dataDosen];
     currentPage = 1;
     totalPages = Math.ceil(filteredDosen.length / dosenPerPage);
@@ -88,9 +85,7 @@ function resetFilters() {
 }
 
 function updateFilterCount() {
-    const countElement = document.getElementById('count');
-    countElement.textContent = filteredDosen.length;
-    
+    document.getElementById('count').textContent = filteredDosen.length;
     const filterCountElement = document.getElementById('filter-count');
     if (filteredDosen.length === dataDosen.length) {
         filterCountElement.textContent = `Menampilkan semua ${filteredDosen.length} dosen`;
@@ -112,70 +107,50 @@ function getRecommendations() {
         return;
     }
     
-    // Define keywords for each lecturer based on their expertise
     const expertiseKeywords = {
-        "Dinamika Populasi Ikan dan Avertebrata Air": ["populasi", "ikan", "avertebrata", "dinamika", "stok", "kelimpahan"],
-        // [FIX] Menambahkan kata kunci untuk "Dinamika Populasi Ikan"
-        "Dinamika Populasi Ikan": ["populasi", "ikan", "stok", "kelimpahan", "pemodelan"],
-        "Akuakultur & Mikrobiologi Akuatik": ["akuakultur", "mikrobiologi", "budidaya", "pertumbuhan", "pakan", "kualitas air"],
-        "Akuakultur & Tumbuhan Air": ["akuakultur", "tumbuhan air", "fitoremediasi", "algae", "rumput laut"],
-        "Teknik Pantai": ["pantai", "teknik", "erosi", "sedimen", "gelombang", "arus"],
-        "Parasit & Penyakit Ikan": ["parasit", "penyakit", "kesehatan", "infeksi", "patogen"],
-        "Ekologi Laut": ["ekologi", "habitat", "biodiversitas", "komunitas", "interaksi"],
+        "Dinamika Populasi Ikan": ["populasi", "ikan", "dinamika", "stok", "kelimpahan", "pemodelan"],
+        "Avertebrata Air": ["avertebrata", "teripang", "kerang", "udang", "kepiting"],
+        "Akuakultur": ["akuakultur", "budidaya", "pakan", "benih", "tambak"],
+        "Mikrobiologi Akuatik": ["mikrobiologi", "bakteri", "plankton", "probiotik"],
+        "Tumbuhan Air": ["tumbuhan air", "fitoremediasi", "algae", "rumput laut", "makrofita"],
+        "Teknik Pantai": ["pantai", "teknik", "erosi", "sedimen", "gelombang", "abrasi"],
+        "Parasit & Penyakit Ikan": ["parasit", "penyakit", "kesehatan", "infeksi", "patogen", "imun"],
+        "Ekologi Laut": ["ekologi", "habitat", "biodiversitas", "komunitas", "interaksi", "mangrove"],
         "Bioteknologi Kelautan": ["bioteknologi", "enzim", "bioaktif", "biomolekul", "genetika"],
         "Konservasi Perairan": ["konservasi", "perlindungan", "kawasan lindung", "spesies terancam"],
         "Akustik Kelautan": ["akustik", "sonar", "bunyi", "frekuensi", "pemetaan"],
         "Oseanografi": ["oseanografi", "arus", "suhu", "salinitas", "parameter fisika"]
     };
     
-    // Calculate scores for each lecturer
     const scoredDosen = dataDosen.map(dosen => {
         let score = 0;
         const words = inputText.split(/\s+/);
         
-        // Check for keyword matches
         words.forEach(word => {
-            if (word.length > 3) { // Only consider words longer than 3 characters
-                // Check in bidang keahlian
-                if (dosen.bidang_keahlian.toLowerCase().includes(word)) {
-                    score += 15;
-                }
-                
-                // Check in predefined keywords
-                if (expertiseKeywords[dosen.bidang_keahlian]) {
-                    if (expertiseKeywords[dosen.bidang_keahlian].some(keyword => 
-                        keyword.includes(word) || word.includes(keyword))) {
-                        score += 10;
+            if (word.length > 3) {
+                dosen.bidang_keahlian_list.forEach(keahlian => {
+                    if (keahlian.toLowerCase().includes(word)) score += 15;
+                    if (expertiseKeywords[keahlian]) {
+                        if (expertiseKeywords[keahlian].some(kw => kw.includes(word) || word.includes(kw))) {
+                            score += 10;
+                        }
                     }
-                }
-                
-                // Check in program studi
-                if (dosen.program_studi.toLowerCase().includes(word)) {
-                    score += 5;
-                }
+                });
+                if (dosen.program_studi.toLowerCase().includes(word)) score += 5;
             }
         });
         
-        return {
-            dosen: dosen,
-            score: score
-        };
+        return { dosen, score };
     });
     
-    // Sort by score and get top 5
     scoredDosen.sort((a, b) => b.score - a.score);
     const topRecommendations = scoredDosen.slice(0, 5).filter(item => item.score > 0);
     
-    // Store recommended dosen for highlighting
     recommendedDosen = topRecommendations.map(item => item.dosen.nip);
     
-    // Display recommendations
     displayRecommendations(topRecommendations);
     
-    // Switch to filter tab to show all lecturers with highlights
-    document.querySelector('.tab-btn[data-tab="filter-tab"]').click();
-    
-    // Apply highlighting to recommended lecturers
+
     highlightRecommendedDosen();
 }
 
@@ -187,13 +162,13 @@ function displayRecommendations(recommendations) {
         return;
     }
     
-    let html = '<div class="recommendation-list">';
+    let html = '<h4>Rekomendasi Teratas:</h4><div class="recommendation-list">';
     recommendations.forEach(item => {
-        const percentage = Math.min(100, (item.score / 100) * 100).toFixed(0);
+        const percentage = Math.min(100, (item.score / 50) * 100).toFixed(0);
         html += `
             <div class="recommendation-item" data-nip="${item.dosen.nip}">
                 <h4>${item.dosen.nama}</h4>
-                <p><strong>Bidang Keahlian:</strong> ${item.dosen.bidang_keahlian}</p>
+                <p><strong>Bidang Keahlian:</strong> ${item.dosen.bidang_keahlian_list.join(', ')}</p>
                 <p><strong>Kesesuaian:</strong> <span class="match-percentage">${percentage}%</span></p>
             </div>
         `;
@@ -202,11 +177,12 @@ function displayRecommendations(recommendations) {
     
     resultsContainer.innerHTML = html;
     
-    // Add click event to recommendation items
     document.querySelectorAll('.recommendation-item').forEach(item => {
         item.addEventListener('click', () => {
+            document.querySelector('.tab-btn[data-tab="filter-tab"]').click();
             const nip = item.getAttribute('data-nip');
-            scrollToDosenCard(nip);
+            // Sedikit delay agar transisi tab selesai sebelum scroll
+            setTimeout(() => scrollToDosenCard(nip), 100);
         });
     });
 }
@@ -214,7 +190,6 @@ function displayRecommendations(recommendations) {
 function highlightRecommendedDosen() {
     document.querySelectorAll('.dosen-card').forEach(card => {
         card.classList.remove('recommended');
-        // [FIX] Menggunakan dataset.nip untuk memeriksa NIP, lebih andal.
         if (recommendedDosen.includes(card.dataset.nip)) {
             card.classList.add('recommended');
         }
@@ -222,27 +197,16 @@ function highlightRecommendedDosen() {
 }
 
 function scrollToDosenCard(nip) {
-    // [FIX] Menggunakan querySelector dengan atribut data-nip untuk menemukan kartu yang tepat.
     const targetCard = document.querySelector(`.dosen-card[data-nip="${nip}"]`);
-    
     if (targetCard) {
-        // Add temporary highlight
         targetCard.classList.add('highlight');
-        
-        // Scroll to the card
         targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        
-        // Remove highlight after 2 seconds
-        setTimeout(() => {
-            targetCard.classList.remove('highlight');
-        }, 2000);
+        setTimeout(() => targetCard.classList.remove('highlight'), 2000);
     }
 }
 
 // Card template function
 function createDosenCard(dosen) {
-    // [FIX 1] Menambahkan atribut data-nip="${dosen.nip}" untuk seleksi yang andal.
-    // [FIX 2] Mengganti data-i18n="NIP" menjadi "nip" agar sesuai dengan objek terjemahan.
     return `
         <div class="dosen-card ${recommendedDosen.includes(dosen.nip) ? 'recommended' : ''}" data-nip="${dosen.nip}">
             <div class="card-body">
@@ -259,7 +223,6 @@ function createDosenCard(dosen) {
                         <p class="jabatan-text">${dosen.jabatan} - ${dosen.program_studi}</p>
                     </div>
                 </div>
-
                 <div class="profile-details">
                     <div class="info-item">
                         <span class="info-label" data-i18n="nip">NIP:</span>
@@ -267,14 +230,14 @@ function createDosenCard(dosen) {
                     </div>
                     <div class="info-item">
                         <span class="info-label" data-i18n="expertise">Bidang Keahlian:</span>
-                        <span class="info-value">${dosen.bidang_keahlian}</span>
+                        <span class="info-value">${dosen.bidang_keahlian_list.join(', ')}</span>
                     </div>
                     <div class="info-item">
                         <span class="info-label" data-i18n="education">Pendidikan:</span>
                         <div class="info-value">
-                            <div class="education-item">S1: ${dosen.pendidikan.s1}</div>
-                            <div class="education-item">S2: ${dosen.pendidikan.s2}</div>
-                            <div class="education-item">S3: ${dosen.pendidikan.s3}</div>
+                            <div class="education-item">🎓S1: ${dosen.pendidikan.s1}</div>
+                            <div class="education-item">🎓S2: ${dosen.pendidikan.s2}</div>
+                            <div class="education-item">🎓S3: ${dosen.pendidikan.s3}</div>
                         </div>
                     </div>
                     <div class="info-item">
@@ -284,7 +247,6 @@ function createDosenCard(dosen) {
                         </span>
                     </div>
                 </div>
-
                 <div class="links-container">
                     ${dosen.links.map(link => 
                         `<a href="${link.url}" class="custom-link" target="_blank" rel="noopener noreferrer">
@@ -298,19 +260,15 @@ function createDosenCard(dosen) {
     `;
 }
 
-
-// Pagination functions
+// Pagination functions (Tidak ada perubahan di sini)
 function showDosenPage(page) {
     const container = document.getElementById('dosen-container');
     container.innerHTML = '';
-    
     const startIndex = (page - 1) * dosenPerPage;
     const endIndex = Math.min(startIndex + dosenPerPage, filteredDosen.length);
-    
     for (let i = startIndex; i < endIndex; i++) {
         container.innerHTML += createDosenCard(filteredDosen[i]);
     }
-    
     updatePaginationButtons(page);
     applyCurrentLanguage();
 }
@@ -318,10 +276,7 @@ function showDosenPage(page) {
 function createPaginationButtons() {
     const paginationContainer = document.getElementById('pagination');
     paginationContainer.innerHTML = '';
-    
-    if (totalPages <= 1) return; // Don't show pagination if only one page
-
-    // Previous button
+    if (totalPages <= 1) return;
     const prevButton = document.createElement('button');
     prevButton.className = 'page-btn';
     prevButton.innerHTML = '&laquo;';
@@ -332,8 +287,6 @@ function createPaginationButtons() {
         }
     });
     paginationContainer.appendChild(prevButton);
-    
-    // Page number buttons
     for (let i = 1; i <= totalPages; i++) {
         const pageButton = document.createElement('button');
         pageButton.className = 'page-btn';
@@ -345,8 +298,6 @@ function createPaginationButtons() {
         });
         paginationContainer.appendChild(pageButton);
     }
-    
-    // Next button
     const nextButton = document.createElement('button');
     nextButton.className = 'page-btn';
     nextButton.innerHTML = '&raquo;';
@@ -360,8 +311,7 @@ function createPaginationButtons() {
 }
 
 function updatePaginationButtons(activePage) {
-    const buttons = document.querySelectorAll('.page-btn');
-    buttons.forEach(button => {
+    document.querySelectorAll('.page-btn').forEach(button => {
         button.classList.remove('active');
         if (parseInt(button.textContent) === activePage) {
             button.classList.add('active');
@@ -369,40 +319,34 @@ function updatePaginationButtons(activePage) {
     });
 }
 
-// Language functions
-function setLanguage(lang) {
+// Language functions (Tidak ada perubahan di sini)
+function applyLanguage(lang) {
     currentLang = lang;
     const translation = translations[lang];
-    
     document.querySelectorAll('[data-i18n]').forEach(element => {
         const key = element.getAttribute('data-i18n');
         if (translation[key]) {
             element.textContent = translation[key];
         }
     });
-
-    // Update dynamic text
-    updateFilterCount(); // Ensure filter count text is also translated if needed
 }
 
 function applyCurrentLanguage() {
-    setLanguage(currentLang);
+    applyLanguage(currentLang);
 }
 
 function setupLanguageToggle() {
     const idLangBtn = document.getElementById('id-lang');
     const enLangBtn = document.getElementById('en-lang');
-    
     idLangBtn.addEventListener('click', () => {
         idLangBtn.classList.add('active');
         enLangBtn.classList.remove('active');
-        setLanguage('id');
+        applyLanguage('id');
     });
-    
     enLangBtn.addEventListener('click', () => {
         enLangBtn.classList.add('active');
         idLangBtn.classList.remove('active');
-        setLanguage('en');
+        applyLanguage('en');
     });
 }
 
