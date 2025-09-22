@@ -69,52 +69,6 @@ body {
     gap: 0.5rem;
 }
 
-/* TAMBAHKAN CSS INI */
-.google-translate-container {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 0.3rem;
-    border-radius: 25px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-/* Custom Google Translate Styling */
-.goog-te-gadget-simple {
-    background-color: transparent !important;
-    border: none !important;
-    font-size: 10pt !important;
-}
-
-.goog-te-gadget-simple .goog-te-menu-value {
-    color: white !important;
-}
-
-.goog-te-gadget-simple .goog-te-menu-value span {
-    color: white !important;
-}
-
-.goog-te-gadget-simple .goog-te-menu-value:before {
-    color: white !important;
-}
-
-.goog-te-banner-frame {
-    display: none !important;
-}
-
-body {
-    top: 0px !important;
-}
-
-/* Update responsive design */
-@media (max-width: 576px) {
-    .language-selector {
-        position: static;
-        justify-content: center;
-        margin-bottom: 1rem;
-        flex-wrap: wrap; /* TAMBAHKAN INI */
-        gap: 0.5rem; /* TAMBAHKAN INI */
-    }
-}
-
 .lang-btn {
     background: rgba(255, 255, 255, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.3);
