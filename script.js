@@ -235,9 +235,9 @@ function createDosenCard(dosen) {
                     <div class="info-item">
                         <span class="info-label" data-i18n="education">Pendidikan:</span>
                         <div class="info-value">
-                            <div class="education-item">🎓S1: ${dosen.pendidikan.s1}</div>
-                            <div class="education-item">🎓S2: ${dosen.pendidikan.s2}</div>
-                            <div class="education-item">🎓S3: ${dosen.pendidikan.s3}</div>
+                            <div class="education-item">S1: ${dosen.pendidikan.s1}</div>
+                            <div class="education-item">S2: ${dosen.pendidikan.s2}</div>
+                            <div class="education-item">S3: ${dosen.pendidikan.s3}</div>
                         </div>
                     </div>
                     <div class="info-item">
