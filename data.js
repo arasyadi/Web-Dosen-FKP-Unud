@@ -5,7 +5,7 @@ const dataDosen = [
         "profileUrl": "https://www.unud.ac.id/in/dosen199809262025061005.html",
         "jabatan": "Asisten Ahli",
         "nip": "199809262025061005",
-        "bidang_keahlian": "Dinamika Populasi Ikan & Avertebrata Air",
+        "bidang_keahlian": "Akuakultur & Kualitas Air & Dinamika Populasi Ikan & Avertebrata Air",
         "pendidikan": {
             "s1": "Budidaya Perairan - Univ. Muhammadiyah Makassar",
             "s2": "Pengelolaan Sumberdaya Perairan - IPB University",
@@ -85,7 +85,7 @@ const dataDosen = [
         "profileUrl": "https://www.unud.ac.id/in/dosen197405292012122001.html",
         "jabatan": "Asisten Ahli",
         "nip": "197405292012122001",
-        "bidang_keahlian": "Parasit & Penyakit Ikan",
+        "bidang_keahlian": "Akuakultur & Parasit dan Penyakit Ikan & Kesehatan Ikan",
         "pendidikan": {
             "s1": "Sosial Ekonomi Perikanan - Universitas Brawijaya",
             "s2": "Budidaya Perairan - Universitas Brawijaya",
@@ -105,7 +105,7 @@ const dataDosen = [
         "profileUrl": "https://www.unud.ac.id/in/dosen199809092024061001.html",
         "jabatan": "Asisten Ahli",
         "nip": "199809092024061001",
-        "bidang_keahlian": "Marine Science & Environmental Remote Sensing",
+        "bidang_keahlian": "Ilmu Kelautan & Penginderaan Jauh",
         "pendidikan": {
             "s1": "Ilmu Kelautan - Universitas Udayana",
             "s2": "Ilmu Lingkungan - Universitas Gadjah Mada",
@@ -165,7 +165,7 @@ const dataDosen = [
         "profileUrl": "https://www.unud.ac.id/in/dosen198307152010121009.html",
         "jabatan": "Lektor Kepala",
         "nip": "198307152010121009",
-        "bidang_keahlian": "Biologi Kelautan & Terumbu Karang & Wisata Bahari",
+        "bidang_keahlian": "Biologi Kelautan & Terumbu Karang & Pariwisata",
         "pendidikan": {
             "s1": "Ilmu Kelautan - Universitas Trunojoyo",
             "s2": "Ilmu Kelautan - Universitas Brawijaya",
@@ -245,7 +245,7 @@ const dataDosen = [
         "profileUrl": "https://sinta.kemdiktisaintek.go.id/authors/profile/5987520",
         "jabatan": "Asisten Ahli",
         "nip": "1986112020181123001",
-        "bidang_keahlian": "Avertebrata Air & Lamun & Mangrove & Tumbuhan Air & Moluska & Krustasea",
+        "bidang_keahlian": "Avertebrata Air & Lamun & Mangrove & Tumbuhan Air & Moluska & Krustase",
         "pendidikan": {
             "s1": "Ilmu Kelautan - Universitas Diponegoro",
             "s2": "Ilmu Kelautan - Universitas Diponegoro",
@@ -265,7 +265,7 @@ const dataDosen = [
         "profileUrl": "https://www.unud.ac.id/in/dosen199412022024061001.html",
         "jabatan": "Asisten Ahli",
         "nip": "199412022024061001",
-        "bidang_keahlian": "Penginderaan Jauh Satelit & GIS & Observasi Bumi & Pengolahan Citra & Lingkungan",
+        "bidang_keahlian": "Penginderaan Jauh & Sistem Informasi Geografis & Pengolahan Citra",
         "pendidikan": {
             "s1": "Agroekoteknologi - Universitas Udayana",
             "s2": "Geografi - Universitas Gadjah Mada",
@@ -341,33 +341,6 @@ const dataDosen = [
         ]
     }
 ];
-
-// Jika ingin menambahkan data dummy hingga 30 dosen (seperti contoh awal)
-for (let i = 12; i < 30; i++) {
-    const programs = ["Ilmu Kelautan", "Manajemen Sumberdaya Perairan", "Budidaya Perairan", "Teknologi Hasil Perikanan"];
-    const expertise = ["Ekologi Laut", "Bioteknologi Kelautan", "Konservasi Perairan", "Dinamika Populasi Ikan", "Akustik Kelautan", "Oseanografi"];
-    
-    dataDosen.push({
-        "nama": `Dr. Dosen Contoh ${i+1}, S.Pi., M.Si.`,
-        "profileUrl": `https://fkp.unud.ac.id/profile/dosen-contoh-${i+1}`,
-        "jabatan": "Dosen Tetap",
-        "nip": `${10000000 + i}`,
-        "bidang_keahlian": `${expertise[i % expertise.length]}`,
-        "pendidikan": { 
-            "s1": "Ilmu Kelautan - Univ. Terkemuka", 
-            "s2": "Marine Science - Univ. Terkemuka", 
-            "s3": "Ilmu Perikanan - Univ. Terkemuka" 
-        },
-        "email": `dosen.contoh.${i+1}@unud.ac.id`,
-        "program_studi": programs[i % programs.length],
-        "foto": `https://placehold.co/120x180/6c757d/white?text=Dosen+${i+1}`,
-        "links": [
-            {"nama": "Publikasi", "url": "#", "icon": "fa-file-alt"},
-            {"nama": "Profil", "url": "#", "icon": "fa-user"},
-            {"nama": "Kontak", "url": "#", "icon": "fa-envelope"}
-        ]
-    });
-}
 
 // Translation data
 const translations = {
