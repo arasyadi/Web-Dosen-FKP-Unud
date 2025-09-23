@@ -4,7 +4,7 @@ const dataDosen = [
         "nama": "Andy Rasyadi, S.Pi., M.Si.",
         "profileUrl": "https://www.unud.ac.id/in/dosen199809262025061005.html",
         "jabatan": "Asisten Ahli",
-        "nip": "199809262025061005",
+        "NIP": "199809262025061005",
         "bidang_keahlian": "Akuakultur & Kualitas Air & Dinamika Populasi Ikan & Avertebrata Air",
         "pendidikan": {
             "s1": "Budidaya Perairan - Univ. Muhammadiyah Makassar",
@@ -24,7 +24,7 @@ const dataDosen = [
         "nama": "Dr. Pande Gde Sasmita Julyantoro, S.Si., M.Si.",
         "profileUrl": "https://www.unud.ac.id/in/dosen198007262008121005.html",
         "jabatan": "Lektor Kepala",
-        "nip": "198007262008121005",
+        "NIP": "198007262008121005",
         "bidang_keahlian": "Akuakultur & Mikrobiologi Akuatik",
         "pendidikan": {
             "s1": "Institut Teknologi Bandung",
@@ -44,7 +44,7 @@ const dataDosen = [
         "nama": "Dr. Ayu Putu Wiweka Krisna Dewi, S.St.Pi., M.P.",
         "profileUrl": "https://www.unud.ac.id/in/dosen199006202025062002.html",
         "jabatan": "Asisten Ahli",
-        "nip": "199006202025062002",
+        "NIP": "199006202025062002",
         "bidang_keahlian": "Akuakultur & Tumbuhan Air",
         "pendidikan": {
             "s1": "Akuakultur - Sekolah Tinggi Perikanan Jakarta",
@@ -64,7 +64,7 @@ const dataDosen = [
         "nama": "Made Narayana Adibhusana, S.Kel., M.Eng.",
         "profileUrl": "https://www.unud.ac.id/in/dosen199410242025061008.html",
         "jabatan": "Asisten Ahli",
-        "nip": "199410242025061008",
+        "NIP": "199410242025061008",
         "bidang_keahlian": "Teknik Pantai",
         "pendidikan": {
             "s1": "Ilmu Kelautan - Universitas Udayana",
@@ -84,7 +84,7 @@ const dataDosen = [
         "nama": "Endang Wulandari Suryaningtyas, S.Pi., M.P.",
         "profileUrl": "https://www.unud.ac.id/in/dosen197405292012122001.html",
         "jabatan": "Asisten Ahli",
-        "nip": "197405292012122001",
+        "NIP": "197405292012122001",
         "bidang_keahlian": "Akuakultur & Kesehatan Ikan",
         "pendidikan": {
             "s1": "Sosial Ekonomi Perikanan - Universitas Brawijaya",
@@ -104,7 +104,7 @@ const dataDosen = [
         "nama": "I Kade Alfian Kusuma Wirayuda, S.Kel., M.Sc.",
         "profileUrl": "https://www.unud.ac.id/in/dosen199809092024061001.html",
         "jabatan": "Asisten Ahli",
-        "nip": "199809092024061001",
+        "NIP": "199809092024061001",
         "bidang_keahlian": "Ilmu Kelautan & Penginderaan Jauh",
         "pendidikan": {
             "s1": "Ilmu Kelautan - Universitas Udayana",
@@ -124,7 +124,7 @@ const dataDosen = [
         "nama": "I Putu Ranu Fajar Maharta, S.Kel., M.Si.",
         "profileUrl": "https://www.unud.ac.id/in/dosen199510022024061002.html",
         "jabatan": "Asisten Ahli",
-        "nip": "199510022024061002",
+        "NIP": "199510022024061002",
         "bidang_keahlian": "Penginderaan Jauh & Mikroplastik & Pencemaran Laut",
         "pendidikan": {
             "s1": "Ilmu Kelautan - Universitas Udayana",
@@ -144,7 +144,7 @@ const dataDosen = [
         "nama": "Prof. Dr. Ir. I Wayan Nuarsa, M.Si.",
         "profileUrl": "https://www.unud.ac.id/in/dosen196805111993031003.html",
         "jabatan": "Professor",
-        "nip": "196805111993031003",
+        "NIP": "196805111993031003",
         "bidang_keahlian": "Penginderaan Jauh & Sistem Informasi Geografis & Pertanian",
         "pendidikan": {
             "s1": "Universitas Udayana",
@@ -164,7 +164,7 @@ const dataDosen = [
         "nama": "Dr. Ir. Dwi Budi Wiyanto, S. Kel., M.P.",
         "profileUrl": "https://www.unud.ac.id/in/dosen198307152010121009.html",
         "jabatan": "Lektor Kepala",
-        "nip": "198307152010121009",
+        "NIP": "198307152010121009",
         "bidang_keahlian": "Biologi Kelautan & Terumbu Karang & Pariwisata",
         "pendidikan": {
             "s1": "Ilmu Kelautan - Universitas Trunojoyo",
@@ -184,7 +184,7 @@ const dataDosen = [
         "nama": "I Nyoman Giri Putra, S.Pd., M.Si.",
         "profileUrl": "https://www.unud.ac.id/in/dosen198701152019031005.html",
         "jabatan": "Lektor",
-        "nip": "198701152019031005",
+        "NIP": "198701152019031005",
         "bidang_keahlian": "Biologi Kelautan & Ekologi Molekuler & Tumbuhan Air & Keanekaragaman Hayati",
         "pendidikan": {
             "s1": "Pendidikan Biologi - Universitas Pendidikan Ganesha",
@@ -204,7 +204,7 @@ const dataDosen = [
         "nama": "Dr. Dewa Ayu Angga Pebriani, S.Pi., M.P.",
         "profileUrl": "https://www.unud.ac.id/in/dosen199002062025062004.html",
         "jabatan": "Asisten Ahli",
-        "nip": "199002062025062004",
+        "NIP": "199002062025062004",
         "bidang_keahlian": "Akuakultur & Plankton & Avertebrata Air & Kualitas Air",
         "pendidikan": {
             "s1": "Budidaya Perairan - Universitas Brawijaya",
@@ -224,7 +224,7 @@ const dataDosen = [
         "nama": "Made Dendy Pratama, S.Pd., M.Si.",
         "profileUrl": "https://www.unud.ac.id/in/dosen199801262024061001.html",
         "jabatan": "Asisten Ahli",
-        "nip": "199801262024061001",
+        "NIP": "199801262024061001",
         "bidang_keahlian": "Akuakultur & Ekologi Perikanan",
         "pendidikan": {
             "s1": "Pendidikan Biologi - Universitas Pendidikan Ganesha",
@@ -244,7 +244,7 @@ const dataDosen = [
         "nama": "Dr. Ni Made Ernawati, S.Kel., M.Si.",
         "profileUrl": "https://sinta.kemdiktisaintek.go.id/authors/profile/5987520",
         "jabatan": "Asisten Ahli",
-        "nip": "1986112020181123001",
+        "NIP": "1986112020181123001",
         "bidang_keahlian": "Avertebrata Air & Lamun & Mangrove & Tumbuhan Air",
         "pendidikan": {
             "s1": "Ilmu Kelautan - Universitas Diponegoro",
@@ -264,7 +264,7 @@ const dataDosen = [
         "nama": "Ir. Moh Saifulloh, S.P., M.Sc.",
         "profileUrl": "https://www.unud.ac.id/in/dosen199412022024061001.html",
         "jabatan": "Asisten Ahli",
-        "nip": "199412022024061001",
+        "NIP": "199412022024061001",
         "bidang_keahlian": "Penginderaan Jauh & Sistem Informasi Geografis",
         "pendidikan": {
             "s1": "Agroekoteknologi - Universitas Udayana",
@@ -284,7 +284,7 @@ const dataDosen = [
         "nama": "Suprabadevi Ayumayasari Saraswati, S.Kel., M.Si.",
         "profileUrl": "https://www.unud.ac.id/in/dosen198811292019092001.html",
         "jabatan": "Lektor",
-        "nip": "198811292019092001",
+        "NIP": "198811292019092001",
         "bidang_keahlian": "Konservasi Perikanan & Ekologi Laut & Pencemaran Perairan",
         "pendidikan": {
             "s1": "Ilmu Kelautan - Universitas Diponegoro",
@@ -304,7 +304,7 @@ const dataDosen = [
         "nama": "Victor Adi Winata, S.Kel., M.P.",
         "profileUrl": "https://www.unud.ac.id/in/dosen199708242025061009.html",
         "jabatan": "Asisten Ahli",
-        "nip": "199708242025061009",
+        "NIP": "199708242025061009",
         "bidang_keahlian": "Identifikasi Molekuler & Dinamika Populasi Ikan & DNA Lingkungan & Mikroplastik",
         "pendidikan": {
             "s1": "Ilmu Kelautan - Universitas Brawijaya",
@@ -324,7 +324,7 @@ const dataDosen = [
         "nama": "Dr. Ir. Nyoman Dati Pertami, S.P., M.Si.",
         "profileUrl": "https://www.unud.ac.id/in/dosen197408112009122001.html",
         "jabatan": "Lektor",
-        "nip": "197408112009122001",
+        "NIP": "197408112009122001",
         "bidang_keahlian": "Perikanan Tawar & Ikhtiologi",
         "pendidikan": {
             "s1": "UPN Veteran Jatim",
@@ -348,7 +348,7 @@ const translations = {
         'title': 'Fakultas Kelautan dan Perikanan', 
         'subtitle': 'Dosen Pengajar Berpengalaman dan Profesional', 
         'position': 'Jabatan:', 
-        'nip': 'nip:', 
+        'NIP': 'NIP:', 
         'expertise': 'Bidang Keahlian:', 
         'education': 'Pendidikan:', 
         'email': 'E-mail:', 
@@ -360,7 +360,7 @@ const translations = {
         'title': 'Faculty of Marine and Fisheries', 
         'subtitle': 'Experienced and Professional Teaching Staff', 
         'position': 'Position:', 
-        'nip': 'nip:', 
+        'NIP': 'NIP:', 
         'expertise': 'Field of Expertise:', 
         'education': 'Education:', 
         'email': 'Email:', 
