@@ -98,12 +98,250 @@ const dataDosen = [
             {"nama": "Scopus", "url": "#", "icon": "fa-file-alt"},
             {"nama": "SINTA", "url": "https://sinta.kemdiktisaintek.go.id/authors/profile/5986102", "icon": "fa-flask"},
             {"nama": "Google Scholar", "url": "https://scholar.google.com/citations?user=9f6H4GQAAAAJ&hl=en&oi=ao", "icon": "fa-graduation-cap"}
+    {
+        "nama": "I Kade Alfian Kusuma Wirayuda, S.Kel., M.Sc.",
+        "profileUrl": "https://www.unud.ac.id/in/dosen199809092024061001.html",
+        "jabatan": "Asisten Ahli",
+        "nip": "199809092024061001",
+        "bidang_keahlian": "Marine Science & Environmental Remote Sensing",
+        "pendidikan": {
+            "s1": "Ilmu Kelautan - Universitas Udayana",
+            "s2": "Ilmu Lingkungan - Universitas Gadjah Mada",
+            "s3": "-"
+        },
+        "email": "alfiankusuma@unud.ac.id",
+        "program_studi": "S1 Manajemen Sumberdaya Perairan",
+        "foto": "https://fkp.unud.ac.id/protected/storage/file_summernote/fdb1f44b78f8538dd41d605159c3b2a1.jpg",
+        "links": [
+            {"nama": "Scopus", "url": "#", "icon": "fa-file-alt"},
+            {"nama": "SINTA", "url": "https://sinta.kemdiktisaintek.go.id/authors/profile/6928818", "icon": "fa-flask"},
+            {"nama": "Google Scholar", "url": "https://scholar.google.com/citations?user=Vey13oAAAAJ&hl=en&oi=ao", "icon": "fa-graduation-cap"}
+        ]
+    },
+    {
+        "nama": "I Putu Ranu Fajar Maharta, S.Kel., M.Si.",
+        "profileUrl": "https://www.unud.ac.id/in/dosen199510022024061002.html",
+        "jabatan": "Asisten Ahli",
+        "nip": "199510022024061002",
+        "bidang_keahlian": "Penginderaan Jauh & Sampah Laut",
+        "pendidikan": {
+            "s1": "Ilmu Kelautan - Universitas Udayana",
+            "s2": "Sains Kebumian - Institut Teknologi Bandung",
+            "s3": "-"
+        },
+        "email": "ranumaharta5@unud.ac.id",
+        "program_studi": "S1 Ilmu Kelautan",
+        "foto": "https://fkp.unud.ac.id/protected/storage/file_summernote/2151f463a607e366a2c05fbe944c5215.jpg",
+        "links": [
+            {"nama": "Scopus", "url": "#", "icon": "fa-file-alt"},
+            {"nama": "SINTA", "url": "http://sinta.kemdiktisaintek.go.id/authors/profile/6927853", "icon": "fa-flask"},
+            {"nama": "Google Scholar", "url": "https://scholar.google.com/citations?hl=en&user=A6JFMoYAAAAJ", "icon": "fa-graduation-cap"}
+        ]
+    },
+    {
+        "nama": "Prof. Dr. Ir. I Wayan Nuarsa, M.Si.",
+        "profileUrl": "https://www.unud.ac.id/in/dosen196805111993031003.html",
+        "jabatan": "Professor",
+        "nip": "196805111993031003",
+        "bidang_keahlian": "Penginderaan Jauh & Sistem Informasi Geografis & Pertanian",
+        "pendidikan": {
+            "s1": "Universitas Udayana",
+            "s2": "Universitas Gadjah Mada",
+            "s3": "Chiba University"
+        },
+        "email": "nuarsa@unud.ac.id",
+        "program_studi": "S1 Ilmu Kelautan",
+        "foto": "https://fkp.unud.ac.id/protected/storage/file_summernote/14a430c332a8c70908f954083b597714.jpg",
+        "links": [
+            {"nama": "Scopus", "url": "#", "icon": "fa-file-alt"},
+            {"nama": "SINTA", "url": "https://sinta.kemdiktisaintek.go.id/authors/profile/5977882", "icon": "fa-flask"},
+            {"nama": "Google Scholar", "url": "https://scholar.google.com/citations?user=xhEG4eoAAAAJ&hl=en&oi=ao", "icon": "fa-graduation-cap"}
+        ]
+    },
+    {
+        "nama": "Dr. Ir. Dwi Budi Wiyanto, S. Kel., M.P.",
+        "profileUrl": "https://www.unud.ac.id/in/dosen198307152010121009.html",
+        "jabatan": "Lektor Kepala",
+        "nip": "198307152010121009",
+        "bidang_keahlian": "Biologi Kelautan & Terumbu Karang & Wisata Bahari",
+        "pendidikan": {
+            "s1": "Ilmu Kelautan - Universitas Trunojoyo",
+            "s2": "Ilmu Kelautan - Universitas Brawijaya",
+            "s3": "Ilmu Perikanan dan Kelautan - Universitas Brawijaya"
+        },
+        "email": "budi.wiyanto@unud.ac.id",
+        "program_studi": "S1 Ilmu Kelautan",
+        "foto": "https://fkp.unud.ac.id/protected/storage/file_summernote/bd6e2bde37a503bc57ad24ef9e4c56e3.jpg",
+        "links": [
+            {"nama": "Scopus", "url": "#", "icon": "fa-file-alt"},
+            {"nama": "SINTA", "url": "https://sinta.kemdiktisaintek.go.id/authors/profile/6025497", "icon": "fa-flask"},
+            {"nama": "Google Scholar", "url": "https://scholar.google.com/citations?user=tRB_-KQAAAAJ&hl=en&oi=ao", "icon": "fa-graduation-cap"}
+        ]
+    },
+    {
+        "nama": "I Nyoman Giri Putra, S.Pd., M.Si.",
+        "profileUrl": "https://www.unud.ac.id/in/dosen198701152019031005.html",
+        "jabatan": "Lektor",
+        "nip": "198701152019031005",
+        "bidang_keahlian": "Biologi Kelautan & Ekologi Molekuler & Botani Kelautan & Keanekaragaman Hayati",
+        "pendidikan": {
+            "s1": "Pendidikan Biologi - Universitas Pendidikan Ganesha",
+            "s2": "Ilmu Kelautan - IPB University",
+            "s3": "-"
+        },
+        "email": "nyomangiriputra@unud.ac.id",
+        "program_studi": "S1 Ilmu Kelautan",
+        "foto": "https://fkp.unud.ac.id/protected/storage/file_summernote/c7a18fc35838f55085ba971a23f15c7d.jpg",
+        "links": [
+            {"nama": "Scopus", "url": "#", "icon": "fa-file-alt"},
+            {"nama": "SINTA", "url": "https://sinta.kemdiktisaintek.go.id/authors/profile/6182219", "icon": "fa-flask"},
+            {"nama": "Google Scholar", "url": "https://scholar.google.com/citations?hl=en&user=a-lXFxYAAAAJ", "icon": "fa-graduation-cap"}
+        ]
+    },
+    {
+        "nama": "Dr. Dewa Ayu Angga Pebriani, S.Pi., M.P.",
+        "profileUrl": "https://www.unud.ac.id/in/dosen199002062025062004.html",
+        "jabatan": "Asisten Ahli",
+        "nip": "199002062025062004",
+        "bidang_keahlian": "Akuakultur & Plankton & Avertebrata Air & Kualitas Air",
+        "pendidikan": {
+            "s1": "Budidaya Perairan - Universitas Brawijaya",
+            "s2": "Budidaya Perairan - Universitas Brawijaya",
+            "s3": "Ilmu Lingkungan - Universitas Udayana"
+        },
+        "email": "pebriani@unud.ac.id",
+        "program_studi": "S1 Akuakultur",
+        "foto": "https://fkp.unud.ac.id/protected/storage/file_summernote/748e69ae89b3e5942b390973ef18a79c.jpg",
+        "links": [
+            {"nama": "Scopus", "url": "#", "icon": "fa-file-alt"},
+            {"nama": "SINTA", "url": "https://sinta.kemdiktisaintek.go.id/authors/profile/6170858", "icon": "fa-flask"},
+            {"nama": "Google Scholar", "url": "https://scholar.google.com/citations?hl=en&user=FtfDL-EAAAAJ", "icon": "fa-graduation-cap"}
+        ]
+    },
+    {
+        "nama": "Made Dendy Pratama",
+        "profileUrl": "https://www.unud.ac.id/in/dosen199801262024061001.html",
+        "jabatan": "Asisten Ahli",
+        "nip": "199801262024061001",
+        "bidang_keahlian": "Akuakultur & Ekologi Perikanan",
+        "pendidikan": {
+            "s1": "Pendidikan Biologi - Universitas Pendidikan Ganesha",
+            "s2": "Biologi - Institut Teknologi Bandung",
+            "s3": "-"
+        },
+        "email": "dendypratama@unud.ac.id",
+        "program_studi": "S1 Akuakultur",
+        "foto": "https://fkp.unud.ac.id/protected/storage/file_summernote/0cb611231c43dd671f1da501973c5c69.jpg",
+        "links": [
+            {"nama": "Scopus", "url": "#", "icon": "fa-file-alt"},
+            {"nama": "SINTA", "url": "https://sinta.kemdiktisaintek.go.id/authors/profile/6930390", "icon": "fa-flask"},
+            {"nama": "Google Scholar", "url": "https://scholar.google.com/citations?hl=en&user=1u15QPoAAAAJ", "icon": "fa-graduation-cap"}
+        ]
+    },
+    {
+        "nama": "Dr. Ni Made Ernawati, S.Kel., M.Si.",
+        "profileUrl": "https://sinta.kemdiktisaintek.go.id/authors/profile/5987520",
+        "jabatan": "Asisten Ahli",
+        "nip": "1986112020181123001",
+        "bidang_keahlian": "Avertebrata Air & Lamun & Mangrove & Tumbuhan Air & Moluska & Krustasea",
+        "pendidikan": {
+            "s1": "Ilmu Kelautan - Universitas Diponegoro",
+            "s2": "Ilmu Kelautan - Universitas Diponegoro",
+            "s3": "Ilmu Lingkungan - Universitas Udayana"
+        },
+        "email": "ernawati@unud.ac.id",
+        "program_studi": "S1 Manajemen Sumberdaya Perairan",
+        "foto": "https://fkp.unud.ac.id/protected/storage/file_summernote/21d0dad5afc9fdefda6936b32734c5d4.jpg",
+        "links": [
+            {"nama": "Scopus", "url": "#", "icon": "fa-file-alt"},
+            {"nama": "SINTA", "url": "https://sinta.kemdiktisaintek.go.id/authors/profile/5987520", "icon": "fa-flask"},
+            {"nama": "Google Scholar", "url": "https://scholar.google.com/citations?user=7lbBN8cAAAAJ&hl=en&oi=ao", "icon": "fa-graduation-cap"}
+        ]
+    },
+    {
+        "nama": "Ir. Moh Saifulloh, S.P., M.Sc.",
+        "profileUrl": "https://www.unud.ac.id/in/dosen199412022024061001.html",
+        "jabatan": "Asisten Ahli",
+        "nip": "199412022024061001",
+        "bidang_keahlian": "Penginderaan Jauh Satelit & GIS & Observasi Bumi & Pengolahan Citra & Lingkungan",
+        "pendidikan": {
+            "s1": "Agroekoteknologi - Universitas Udayana",
+            "s2": "Geografi - Universitas Gadjah Mada",
+            "s3": "-"
+        },
+        "email": "m.saifulloh@unud.ac.id",
+        "program_studi": "S1 Ilmu Kelautan",
+        "foto": "https://fkp.unud.ac.id/protected/storage/file_summernote/8dacc64093a51576f82ef52cf7428dc6.jpg",
+        "links": [
+            {"nama": "Scopus", "url": "#", "icon": "fa-file-alt"},
+            {"nama": "SINTA", "url": "https://sinta.kemdiktisaintek.go.id/authors/profile/6851404", "icon": "fa-flask"},
+            {"nama": "Google Scholar", "url": "https://scholar.google.com/citations?hl=en&user=nEqoa-oAAAAJ", "icon": "fa-graduation-cap"}
+        ]
+    },
+    {
+        "nama": "Suprabadevi Ayumayasari Saraswati, S.Kel., M.Si.",
+        "profileUrl": "https://www.unud.ac.id/in/dosen198811292019092001.html",
+        "jabatan": "Lektor",
+        "nip": "198811292019092001",
+        "bidang_keahlian": "Konservasi Perikanan & Ekologi Laut & Pencemaran",
+        "pendidikan": {
+            "s1": "Ilmu Kelautan - Universitas Diponegoro",
+            "s2": "Ilmu Lingkungan - Universitas Udayana",
+            "s3": "-"
+        },
+        "email": "basudewi@unud.ac.id",
+        "program_studi": "S1 Manajemen Sumberdaya Perairan",
+        "foto": "https://fkp.unud.ac.id/protected/storage/file_summernote/2a235d981514372f812ffff6ea357b2a.jpg",
+        "links": [
+            {"nama": "Scopus", "url": "#", "icon": "fa-file-alt"},
+            {"nama": "SINTA", "url": "https://sinta.kemdiktisaintek.go.id/authors/profile/6170045", "icon": "fa-flask"},
+            {"nama": "Google Scholar", "url": "https://scholar.google.com/citations?hl=en&user=TWYSLeYAAAAJ", "icon": "fa-graduation-cap"}
+        ]
+    },
+    {
+        "nama": "Victor Adi Winata, S.Kel., M.P.",
+        "profileUrl": "https://www.unud.ac.id/in/dosen199708242025061009.html",
+        "jabatan": "Asisten Ahli",
+        "nip": "199708242025061009",
+        "bidang_keahlian": "Identifikasi Molekuler & Genetika Populasi Ikan & DNA Lingkungan Laut & Mikroplastik",
+        "pendidikan": {
+            "s1": "Ilmu Kelautan - Universitas Brawijaya",
+            "s2": "Budidaya Perairan - Universitas Brawijaya",
+            "s3": "-"
+        },
+        "email": "adi.winata@unud.ac.id",
+        "program_studi": "S1 Manajemen Sumberdaya Perairan",
+        "foto": "https://fkp.unud.ac.id/protected/storage/file_summernote/dfc9ba8b9fe26c2702118aa20c9b6e66.jpg",
+        "links": [
+            {"nama": "Scopus", "url": "#", "icon": "fa-file-alt"},
+            {"nama": "SINTA", "url": "https://sinta.kemdiktisaintek.go.id/authors/profile/6970594", "icon": "fa-flask"},
+            {"nama": "Google Scholar", "url": "https://scholar.google.com/citations?hl=en&user=TBAT-lMAAAAJ", "icon": "fa-graduation-cap"}
+        ]
+    },
+    {
+        "nama": "Dr. Ir. Nyoman Dati Pertami, S.P., M.Si.",
+        "profileUrl": "https://www.unud.ac.id/in/dosen197408112009122001.html",
+        "jabatan": "Lektor",
+        "nip": "197408112009122001",
+        "bidang_keahlian": "Perikanan Tawar & Ikhtiologi",
+        "pendidikan": {
+            "s1": "UPN Veteran Jatim",
+            "s2": "Universitas Udayana",
+            "s3": "IPB University"
+        },
+        "email": "dati.pertami@unud.ac.id",
+        "program_studi": "S1 Manajemen Sumberdaya Perairan",
+        "foto": "https://fkp.unud.ac.id/protected/storage/file_summernote/d2ad2656207f7b290f244b192fb35bdf.jpg",
+        "links": [
+            {"nama": "Scopus", "url": "#", "icon": "fa-file-alt"},
+            {"nama": "SINTA", "url": "https://sinta.kemdiktisaintek.go.id/authors/profile/5986006", "icon": "fa-flask"},
+            {"nama": "Google Scholar", "url": "https://scholar.google.com/citations?hl=en&user=iH2NeiAAAAAJ", "icon": "fa-graduation-cap"}
         ]
     }
 ];
 
-// Generate data untuk total 30 dosen
-for (let i = 5; i < 30; i++) {
+// Jika ingin menambahkan data dummy hingga 30 dosen (seperti contoh awal)
+for (let i = 12; i < 30; i++) {
     const programs = ["Ilmu Kelautan", "Manajemen Sumberdaya Perairan", "Budidaya Perairan", "Teknologi Hasil Perikanan"];
     const expertise = ["Ekologi Laut", "Bioteknologi Kelautan", "Konservasi Perairan", "Dinamika Populasi Ikan", "Akustik Kelautan", "Oseanografi"];
     
@@ -135,24 +373,24 @@ const translations = {
         'title': 'Fakultas Kelautan dan Perikanan', 
         'subtitle': 'Dosen Pengajar Berpengalaman dan Profesional', 
         'position': 'Jabatan:', 
-        'nip': 'NIP:', 
+        'nip': 'nip:', 
         'expertise': 'Bidang Keahlian:', 
         'education': 'Pendidikan:', 
         'email': 'E-mail:', 
         'studyProgram': 'Program Studi:', 
         'photoNote': '*Foto dapat diganti', 
-        'footer': '© 2025 Andy Raasyadi. Hak Cipta Dilindungi.' 
+        'footer': '© 2023 Fakultas Kelautan dan Perikanan. Hak Cipta Dilindungi.' 
     },
     'en': { 
         'title': 'Faculty of Marine and Fisheries', 
         'subtitle': 'Experienced and Professional Teaching Staff', 
         'position': 'Position:', 
-        'nip': 'NIP:', 
+        'nip': 'nip:', 
         'expertise': 'Field of Expertise:', 
         'education': 'Education:', 
         'email': 'Email:', 
         'studyProgram': 'Study Program:', 
         'photoNote': '*Photo can be replaced', 
-        'footer': '© 2025 Andy Rasyadi. All rights reserved.' 
+        'footer': '© 2023 Faculty of Marine and Fisheries. All rights reserved.' 
     }
 };
