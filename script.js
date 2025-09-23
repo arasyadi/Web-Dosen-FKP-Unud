@@ -107,19 +107,24 @@ function getRecommendations() {
         return;
     }
     
+    // [FIX 3] Improvisasi dan penambahan kata kunci serta kategori baru
     const expertiseKeywords = {
-        "Dinamika Populasi Ikan": ["populasi", "ikan", "dinamika", "stok", "kelimpahan", "pemodelan"],
-        "Avertebrata Air": ["avertebrata", "teripang", "kerang", "udang", "kepiting"],
-        "Akuakultur": ["akuakultur", "budidaya", "pakan", "benih", "tambak"],
-        "Mikrobiologi Akuatik": ["mikrobiologi", "bakteri", "plankton", "probiotik"],
-        "Tumbuhan Air": ["tumbuhan air", "fitoremediasi", "algae", "rumput laut", "makrofita"],
-        "Teknik Pantai": ["pantai", "teknik", "erosi", "sedimen", "gelombang", "abrasi"],
-        "Parasit & Penyakit Ikan": ["parasit", "penyakit", "kesehatan", "infeksi", "patogen", "imun"],
-        "Ekologi Laut": ["ekologi", "habitat", "biodiversitas", "komunitas", "interaksi", "mangrove"],
-        "Bioteknologi Kelautan": ["bioteknologi", "enzim", "bioaktif", "biomolekul", "genetika"],
-        "Konservasi Perairan": ["konservasi", "perlindungan", "kawasan lindung", "spesies terancam"],
+        "Dinamika Populasi Ikan": ["panjang bobot", "faktor kondisi", "fulton", "populasi", "ikan", "dinamika", "stok", "kelimpahan", "analisis", "sumber daya", "evaluasi", "ikhtiologi", "taksonomi ikan", "biologi ikan"],
+        "Avertebrata Air": ["avertebrata", "teripang", "kerang", "udang", "kepiting", "biota laut", "invertebrata"],
+        "Akuakultur": ["akuakultur", "budidaya", "kolam", "terpal", "pakan", "benih", "tambak", "kualitas air", "hama", "nutrisi", "reproduksi"],
+        "Mikrobiologi Akuatik": ["mikrobiologi", "bakteri", "plankton", "probiotik", "mikroba", "virus", "bioremediasi"],
+        "Tumbuhan Air": ["tumbuhan air", "fitoremediasi", "algae", "rumput laut", "makrofita", "lamun", "mangrove", "vegetasi"],
+        "Kualitas Air": ["suhu", "kekeruhan", "bau", "tss", "ph", "oksigen terlarut", "do", "co2", "amonia", "nitrit", "nitrat", "fosfat", "salinitas", "alkalinitas", "makrozoobentos", "indeks keanekaragaman"],
+        "Teknik Pantai": ["pantai", "teknik", "erosi", "sedimen", "gelombang", "abrasi", "pesisir", "reklamasi", "infrastruktur"],
+        "Parasit & Penyakit Ikan": ["parasit", "penyakit", "kesehatan", "infeksi", "patogen", "imun", "patologi", "diagnostik", "imunologi", "kesehatan ikan"],
+        "Ekologi Laut": ["ekologi", "keanekaragaman", "habitat", "biodiversitas", "komunitas", "interaksi", "mangrove", "ekosistem", "rantai makanan", "konservasi", "terumbu karang"],
+        "Bioteknologi Kelautan": ["bioteknologi", "probiotik", "enzim", "bioaktif", "biomolekul", "genetika"],
+        "Konservasi Perairan": ["konservasi", "perlindungan", "kawasan lindung", "spesies terancam", "rehabilitasi", "manajemen"],
         "Akustik Kelautan": ["akustik", "sonar", "bunyi", "frekuensi", "pemetaan"],
-        "Oseanografi": ["oseanografi", "arus", "suhu", "salinitas", "parameter fisika"]
+        "Oseanografi": ["oseanografi", "arus", "suhu", "salinitas", "parameter fisika"],
+        "Penginderaan Jauh & SIG": ["penginderaan jauh", "remote sensing", "sig", "gis", "pemetaan", "citra satelit", "spasial"],
+        "Pencemaran Laut": ["pencemaran", "polusi", "mikroplastik", "logam berat", "limbah", "toksikologi"],
+        "Biologi Molekuler Kelautan": ["molekuler", "genetika", "dna", "edna", "filogeni", "identifikasi"]
     };
     
     const scoredDosen = dataDosen.map(dosen => {
@@ -130,8 +135,9 @@ function getRecommendations() {
             if (word.length > 3) {
                 dosen.bidang_keahlian_list.forEach(keahlian => {
                     if (keahlian.toLowerCase().includes(word)) score += 15;
-                    if (expertiseKeywords[keahlian]) {
-                        if (expertiseKeywords[keahlian].some(kw => kw.includes(word) || word.includes(kw))) {
+                    // Mencari kata kunci yang cocok dalam daftar keahlian
+                    for (const key in expertiseKeywords) {
+                        if (dosen.bidang_keahlian_list.includes(key) && expertiseKeywords[key].some(kw => kw.includes(word) || word.includes(kw))) {
                             score += 10;
                         }
                     }
@@ -146,10 +152,18 @@ function getRecommendations() {
     scoredDosen.sort((a, b) => b.score - a.score);
     const topRecommendations = scoredDosen.slice(0, 5).filter(item => item.score > 0);
     
-    recommendedDosen = topRecommendations.map(item => item.dosen.nip);
+    // [FIX 1] Menggunakan NIP
+    recommendedDosen = topRecommendations.map(item => item.dosen.NIP);
     
     displayRecommendations(topRecommendations);
     
+    // [FIX 2] Reset daftar dosen ke semua dosen tanpa mengubah filter
+    filteredDosen = [...dataDosen];
+    currentPage = 1;
+    totalPages = Math.ceil(filteredDosen.length / dosenPerPage);
+    showDosenPage(currentPage);
+    createPaginationButtons();
+    updateFilterCount();
 
     highlightRecommendedDosen();
 }
@@ -166,7 +180,7 @@ function displayRecommendations(recommendations) {
     recommendations.forEach(item => {
         const percentage = Math.min(100, (item.score / 50) * 100).toFixed(0);
         html += `
-            <div class="recommendation-item" data-nip="${item.dosen.nip}">
+            <div class="recommendation-item" data-nip="${item.dosen.NIP}">
                 <h4>${item.dosen.nama}</h4>
                 <p><strong>Bidang Keahlian:</strong> ${item.dosen.bidang_keahlian_list.join(', ')}</p>
                 <p><strong>Kesesuaian:</strong> <span class="match-percentage">${percentage}%</span></p>
@@ -181,7 +195,6 @@ function displayRecommendations(recommendations) {
         item.addEventListener('click', () => {
             document.querySelector('.tab-btn[data-tab="filter-tab"]').click();
             const nip = item.getAttribute('data-nip');
-            // Sedikit delay agar transisi tab selesai sebelum scroll
             setTimeout(() => scrollToDosenCard(nip), 100);
         });
     });
@@ -190,6 +203,7 @@ function displayRecommendations(recommendations) {
 function highlightRecommendedDosen() {
     document.querySelectorAll('.dosen-card').forEach(card => {
         card.classList.remove('recommended');
+        // [FIX 1] Menggunakan NIP
         if (recommendedDosen.includes(card.dataset.nip)) {
             card.classList.add('recommended');
         }
@@ -197,6 +211,7 @@ function highlightRecommendedDosen() {
 }
 
 function scrollToDosenCard(nip) {
+    // [FIX 1] Menggunakan NIP
     const targetCard = document.querySelector(`.dosen-card[data-nip="${nip}"]`);
     if (targetCard) {
         targetCard.classList.add('highlight');
@@ -208,7 +223,7 @@ function scrollToDosenCard(nip) {
 // Card template function
 function createDosenCard(dosen) {
     return `
-        <div class="dosen-card ${recommendedDosen.includes(dosen.nip) ? 'recommended' : ''}" data-nip="${dosen.nip}">
+        <div class="dosen-card ${recommendedDosen.includes(dosen.NIP) ? 'recommended' : ''}" data-nip="${dosen.NIP}">
             <div class="card-body">
                 <div class="card-intro">
                     <div class="photo-container">
@@ -225,8 +240,8 @@ function createDosenCard(dosen) {
                 </div>
                 <div class="profile-details">
                     <div class="info-item">
-                        <span class="info-label" data-i18n="nip">NIP:</span>
-                        <span class="info-value">${dosen.nip}</span>
+                        <span class="info-label" data-i18n="NIP">NIP:</span>
+                        <span class="info-value">${dosen.NIP}</span>
                     </div>
                     <div class="info-item">
                         <span class="info-label" data-i18n="expertise">Bidang Keahlian:</span>
