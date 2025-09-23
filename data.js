@@ -98,6 +98,8 @@ const dataDosen = [
             {"nama": "Scopus", "url": "#", "icon": "fa-file-alt"},
             {"nama": "SINTA", "url": "https://sinta.kemdiktisaintek.go.id/authors/profile/5986102", "icon": "fa-flask"},
             {"nama": "Google Scholar", "url": "https://scholar.google.com/citations?user=9f6H4GQAAAAJ&hl=en&oi=ao", "icon": "fa-graduation-cap"}
+            ]
+    },
     {
         "nama": "I Kade Alfian Kusuma Wirayuda, S.Kel., M.Sc.",
         "profileUrl": "https://www.unud.ac.id/in/dosen199809092024061001.html",
