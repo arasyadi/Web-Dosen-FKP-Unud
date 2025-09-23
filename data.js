@@ -85,7 +85,7 @@ const dataDosen = [
         "profileUrl": "https://www.unud.ac.id/in/dosen197405292012122001.html",
         "jabatan": "Asisten Ahli",
         "nip": "197405292012122001",
-        "bidang_keahlian": "Akuakultur & Parasit dan Penyakit Ikan & Kesehatan Ikan",
+        "bidang_keahlian": "Akuakultur & Kesehatan Ikan",
         "pendidikan": {
             "s1": "Sosial Ekonomi Perikanan - Universitas Brawijaya",
             "s2": "Budidaya Perairan - Universitas Brawijaya",
@@ -125,7 +125,7 @@ const dataDosen = [
         "profileUrl": "https://www.unud.ac.id/in/dosen199510022024061002.html",
         "jabatan": "Asisten Ahli",
         "nip": "199510022024061002",
-        "bidang_keahlian": "Penginderaan Jauh & Sampah Laut",
+        "bidang_keahlian": "Penginderaan Jauh & Mikroplastik & Pencemaran Laut",
         "pendidikan": {
             "s1": "Ilmu Kelautan - Universitas Udayana",
             "s2": "Sains Kebumian - Institut Teknologi Bandung",
@@ -221,7 +221,7 @@ const dataDosen = [
         ]
     },
     {
-        "nama": "Made Dendy Pratama",
+        "nama": "Made Dendy Pratama, S.Pd., M.Si.",
         "profileUrl": "https://www.unud.ac.id/in/dosen199801262024061001.html",
         "jabatan": "Asisten Ahli",
         "nip": "199801262024061001",
@@ -245,7 +245,7 @@ const dataDosen = [
         "profileUrl": "https://sinta.kemdiktisaintek.go.id/authors/profile/5987520",
         "jabatan": "Asisten Ahli",
         "nip": "1986112020181123001",
-        "bidang_keahlian": "Avertebrata Air & Lamun & Mangrove & Tumbuhan Air & Moluska & Krustase",
+        "bidang_keahlian": "Avertebrata Air & Lamun & Mangrove & Tumbuhan Air",
         "pendidikan": {
             "s1": "Ilmu Kelautan - Universitas Diponegoro",
             "s2": "Ilmu Kelautan - Universitas Diponegoro",
@@ -265,7 +265,7 @@ const dataDosen = [
         "profileUrl": "https://www.unud.ac.id/in/dosen199412022024061001.html",
         "jabatan": "Asisten Ahli",
         "nip": "199412022024061001",
-        "bidang_keahlian": "Penginderaan Jauh & Sistem Informasi Geografis & Pengolahan Citra",
+        "bidang_keahlian": "Penginderaan Jauh & Sistem Informasi Geografis",
         "pendidikan": {
             "s1": "Agroekoteknologi - Universitas Udayana",
             "s2": "Geografi - Universitas Gadjah Mada",
@@ -285,7 +285,7 @@ const dataDosen = [
         "profileUrl": "https://www.unud.ac.id/in/dosen198811292019092001.html",
         "jabatan": "Lektor",
         "nip": "198811292019092001",
-        "bidang_keahlian": "Konservasi Perikanan & Ekologi Laut & Pencemaran",
+        "bidang_keahlian": "Konservasi Perikanan & Ekologi Laut & Pencemaran Perairan",
         "pendidikan": {
             "s1": "Ilmu Kelautan - Universitas Diponegoro",
             "s2": "Ilmu Lingkungan - Universitas Udayana",
@@ -305,7 +305,7 @@ const dataDosen = [
         "profileUrl": "https://www.unud.ac.id/in/dosen199708242025061009.html",
         "jabatan": "Asisten Ahli",
         "nip": "199708242025061009",
-        "bidang_keahlian": "Identifikasi Molekuler & Genetika Populasi Ikan & DNA Lingkungan Laut & Mikroplastik",
+        "bidang_keahlian": "Identifikasi Molekuler & Dinamika Populasi Ikan & DNA Lingkungan & Mikroplastik",
         "pendidikan": {
             "s1": "Ilmu Kelautan - Universitas Brawijaya",
             "s2": "Budidaya Perairan - Universitas Brawijaya",
