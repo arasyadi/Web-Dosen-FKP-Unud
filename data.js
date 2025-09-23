@@ -185,7 +185,7 @@ const dataDosen = [
         "profileUrl": "https://www.unud.ac.id/in/dosen198701152019031005.html",
         "jabatan": "Lektor",
         "nip": "198701152019031005",
-        "bidang_keahlian": "Biologi Kelautan & Ekologi Molekuler & Botani Kelautan & Keanekaragaman Hayati",
+        "bidang_keahlian": "Biologi Kelautan & Ekologi Molekuler & Tumbuhan Air & Keanekaragaman Hayati",
         "pendidikan": {
             "s1": "Pendidikan Biologi - Universitas Pendidikan Ganesha",
             "s2": "Ilmu Kelautan - IPB University",
