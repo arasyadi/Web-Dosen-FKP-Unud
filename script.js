@@ -111,7 +111,7 @@ function getRecommendations() {
     const expertiseKeywords = {
         "Dinamika Populasi Ikan": ["panjang bobot", "faktor kondisi", "fulton", "populasi", "ikan", "dinamika", "stok", "kelimpahan", "analisis", "sumber daya", "evaluasi", "ikhtiologi", "taksonomi ikan", "biologi ikan"],
         "Avertebrata Air": ["avertebrata", "teripang", "kerang", "udang", "kepiting", "biota laut", "invertebrata"],
-        "Akuakultur": ["akuakultur", "budidaya", "kolam", "terpal", "pakan", "benih", "tambak", "kualitas air", "hama", "nutrisi", "reproduksi"],
+        "Akuakultur": ["lele", "bandeng", "kakap", "bawal", "kerapu", "budidaya", "kolam", "terpal", "pakan", "benih", "tambak", "kualitas air", "hama", "nutrisi", "reproduksi"],
         "Mikrobiologi Akuatik": ["mikrobiologi", "bakteri", "plankton", "probiotik", "mikroba", "virus", "bioremediasi"],
         "Tumbuhan Air": ["tumbuhan air", "fitoremediasi", "algae", "rumput laut", "makrofita", "lamun", "mangrove", "vegetasi"],
         "Kualitas Air": ["suhu", "kekeruhan", "bau", "tss", "ph", "oksigen terlarut", "do", "co2", "amonia", "nitrit", "nitrat", "fosfat", "salinitas", "alkalinitas", "makrozoobentos", "indeks keanekaragaman"],
