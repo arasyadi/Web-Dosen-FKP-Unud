@@ -5,7 +5,7 @@ const dataDosen = [
         "profileUrl": "https://www.unud.ac.id/in/dosen199809262025061005.html",
         "jabatan": "Asisten Ahli",
         "NIP": "199809262025061005",
-        "bidang_keahlian": "Akuakultur & Kualitas Air & Dinamika Populasi Ikan & Avertebrata Air",
+        "bidang_keahlian": "Kualitas Air & Dinamika Populasi Ikan & Avertebrata Air",
         "pendidikan": {
             "s1": "Budidaya Perairan - Univ. Muhammadiyah Makassar",
             "s2": "Pengelolaan Sumberdaya Perairan - IPB University",
